@@ -25,23 +25,25 @@ function App() {
   return (
     <div className="contenedor">
 
-      <p id="linea1"></p>
+      <div className="img-principal">
+        <img src='/dihsusbackgroundlogo.png' alt="dihsuslogo" />
+      </div>
+
+      <div className="botonesSuperiores">
+        <button id="inicio" className="btnS">Menu Principal</button>
+        <button id="buscarR" className="btnS">Buscar Repositorios</button>
+        <button id="crearR" className="btnS">Crear Repositorios</button>
+      </div>
+      
       <h1 id="titulo">¡Biblioteca Personal de Mods de Minecraft!</h1>
       <p id="intro">Esto es un proyecto de prueba, 
         en el cual sirve de repositorio para subir y descargar mods de Minecraft 
         de manera ordenada y sencilla</p>
 
-        <div className="img-principal">
-          <img src="/image-10.jpg" className="mc_img" alt="imagen_1" />
-          <img src="/tel-aviv-impressed-tel-aviv.png" className="mc_img" alt="imagen_2" />
-          <img src="/136f9e68a80960d84354a4a6ad3f6485.jpg" className="mc_img" alt="imagen_3" />
-        </div>
-
       <section className="zonaFormulario">
         <FormularioSubida />
       </section>
 
-      <p id="linea2"></p>
     </div>
   )
 }

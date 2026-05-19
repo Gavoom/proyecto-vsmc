@@ -1,7 +1,28 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MinecraftText';
+
+  src: url(/fonts/Minecraft.ttf)
+  format('truetype');
+}
+
+@font-face {
+  font-family: 'MinecraftTitle';
+
+  src: url(/fonts/MINECRAFTPE.ttf)
+  format('truetype');
+}
+
+@font-face {
+  font-family: 'MinecraftTextTwo';
+
+  src: url(/fonts/Minercraftory.ttf)
+  format('truetype');
 }
 
 body{
@@ -9,48 +30,82 @@ body{
 }
 
 .contenedor{
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  background-image: url(pixel-landscape-with-sky-grass-and-dirt-horizontal-block-banner-in-retro-8bit-style-perfect-gamer-wallpaper-or-creative-poster-abstract-modern-illustration-background-vector.jpg);
-}
-
-/* #linea1{
-  border: 18px, #024b1b, solid;
-}
-
-#linea2{
-  border: 18px, #33261d, solid;
-  margin-top: auto;
-} */
-
-#titulo{
-  color: #33261d;
-  text-align: center;
-  padding-top: 50px;
-  font-family: Arial;
-}
-
-#intro{
-  color: #33261d;
-  text-align: center;
-  font-size: 18px;
-  font-family: Arial;
+  background-image: url(portalnether.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .img-principal{
-  border: 18px, solid, transparent;
-  height: 40em;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  z-index: 10;
 }
 
-.mc_img{
-  height: 25em;
-  width: 28em;
-  display: inline-block;
-  margin: 30px;
-  margin-left: 115px;
-  border-radius: 1em;
-  max-width: 100%;
-  object-fit: cover;
+.img-principal img{
+  width: 130px;
 }
 
+.botonesSuperiores{
+  border: 2px transparent solid;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 9rem;
+}
+
+.btnS{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  width: 300px;
+  padding-top: 25px;
+  font-family: 'MinecraftTextTwo';
+}
+
+.btnS:hover{
+  text-decoration: underline;
+  color: rgb(10, 152, 10);
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+
+#titulo{
+  border: 4px transparent solid;
+  background-color: transparent;
+  text-align: left;
+  padding-top: 30px;
+  color: white;
+  text-shadow: 0px 0px 5px #a020f0, 0px 0px 10px #a020f0, 0px 0px 20px #c800ff, 0px 0px 40px #ff00ff;
+  font-family: 'MinecraftTitle';
+  font-size: 38px;
+  margin-left: 30px;
+}
+
+#intro{
+  color: #349b08;
+  text-align: left;
+  font-size: 22px;
+  font-family: 'MinecraftText';
+  width: 35em;
+  margin-left: 30px;
+}
+
+/* Cuando la ventana mida 1000px de ancho o menos, aplica estas reglas: */
+@media (max-width: 1000px) {
+  
+  .botonesSuperiores {
+  /* En vez de estar en fila, los apila de arriba a abajo */
+    gap: 1.5rem;            /* Quitamos el espacio gigante de 9rem */
+    padding-top: 130px;     /* Empujamos los botones hacia abajo para que el logo quede libre arriba */
+  }
+
+  .img-principal img {
+    width: 90px; /* Achicamos un poquito el logo para que no quite tanta pantalla */
+  }
+
+}

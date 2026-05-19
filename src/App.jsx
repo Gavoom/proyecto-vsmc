@@ -33,8 +33,8 @@ function App() {
 
         <div className="img-principal">
           <img src="/image-10.jpg" className="mc_img" alt="imagen_1" />
-          <img src="/Steve__2.png" className="mc_img" alt="imagen_2" />
-          <img src="/1c3a9f59c02fe16c5a439fb5972dad3e.jpg" className="mc_img" alt="imagen_3" />
+          <img src="/tel-aviv-impressed-tel-aviv.png" className="mc_img" alt="imagen_2" />
+          <img src="/136f9e68a80960d84354a4a6ad3f6485.jpg" className="mc_img" alt="imagen_3" />
         </div>
 
       <section className="zonaFormulario">

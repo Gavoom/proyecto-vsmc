@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body{
+ background-color: #33261d
+}
+
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(pixel-landscape-with-sky-grass-and-dirt-horizontal-block-banner-in-retro-8bit-style-perfect-gamer-wallpaper-or-creative-poster-abstract-modern-illustration-background-vector.jpg);
+}
+
+/* #linea1{
+  border: 18px, #024b1b, solid;
+}
+
+#linea2{
+  border: 18px, #33261d, solid;
+  margin-top: auto;
+} */
+
+#titulo{
+  color: #33261d;
+  text-align: center;
+  padding-top: 50px;
+  font-family: Arial;
+}
+
+#intro{
+  color: #33261d;
+  text-align: center;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+.img-principal{
+  border: 18px, solid, transparent;
+  height: 40em;
+}
+
+.mc_img{
+  height: 25em;
+  width: 28em;
+  display: inline-block;
+  margin: 30px;
+  margin-left: 115px;
+  border-radius: 1em;
+  max-width: 100%;
+  object-fit: cover;
+}
+

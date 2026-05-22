@@ -26,9 +26,10 @@ body {
 
 .contenedor {
   min-height: 100vh;
-  background-image: url(portalnether.jpg);
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.85) 100%), url(background1.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
 }
 
@@ -76,19 +77,24 @@ body {
   text-align: left;
   padding-top: 30px;
   color: white;
-  text-shadow: 0px 0px 5px #a020f0, 0px 0px 10px #a020f0, 0px 0px 20px #c800ff, 0px 0px 40px #ff00ff;
-  font-family: 'MinecraftTitle';
+  text-shadow: 2px 2px 15px #047906, -2px -2px 16px rgb(0, 0, 0);
+  font-family: 'MinecraftText';
   font-size: 38px;
   margin-left: 30px;
 }
 
+strong{
+  color:#00AA00;
+}
+
 #intro {
-  color: #349b08;
+  color: white;
   text-align: left;
   font-size: 22px;
   font-family: 'MinecraftText';
   width: 35em;
   margin-left: 30px;
+  margin-top: 23px;
 }
 
 .grupo-tarjetas {
@@ -105,6 +111,7 @@ body {
   flex-direction: column;
   width: 500px;
   box-shadow: 0px 0px 15px #000000;
+  transition: 0.4s;
 }
 
 .tarjeta-img {
@@ -112,6 +119,11 @@ body {
   height: 240px; 
   object-fit: cover;
   border-bottom: none;
+}
+
+.tarjeta-contenedor:hover{
+  transform: scale(1.1);
+  transition: 0.4s;
 }
 
 .tarjeta-descripcion {
@@ -133,7 +145,8 @@ body {
    DISEÑO MÓVIL (Responsivo)
    ========================================= */
 /* Cuando la ventana mida 1000px de ancho o menos, aplica estas reglas: */
-@media (max-width: 1000px) {
+@media (max-width: 1000px) 
+{
   
   .botonesSuperiores {
     flex-direction: column; /* Apila los botones de arriba a abajo */
@@ -155,4 +168,15 @@ body {
     flex-direction: column; /* Apila el slider en móviles */
     margin-left: 0;
   }
+}
+
+/* ZONA DE CSS DEL CREAR REPOSITORIOS */
+
+.formulario-contenedor{
+  border: 2px solid white;
+  box-shadow: 2px 2px 15px white;
+  background-color: white;
+  width: 750px;
+  height: 500px;
+  
 }

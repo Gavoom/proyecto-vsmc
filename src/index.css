@@ -1,35 +1,30 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 @font-face {
   font-family: 'MinecraftText';
-
-  src: url(/fonts/Minecraft.ttf)
-  format('truetype');
+  src: url(/fonts/Minecraft.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'MinecraftTitle';
-
-  src: url(/fonts/MINECRAFTPE.ttf)
-  format('truetype');
+  src: url(/fonts/MINECRAFTPE.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'MinecraftTextTwo';
-
-  src: url(/fonts/Minercraftory.ttf)
-  format('truetype');
+  src: url(/fonts/Minercraftory.ttf) format('truetype');
 }
 
-body{
- background-color: #33261d
+body {
+  background-color: #33261d;
 }
 
-.contenedor{
+.contenedor {
   min-height: 100vh;
   background-image: url(portalnether.jpg);
   background-repeat: no-repeat;
@@ -37,18 +32,18 @@ body{
   position: relative;
 }
 
-.img-principal{
+.img-principal {
   position: absolute;
   top: -10px;
   left: 20px;
   z-index: 10;
 }
 
-.img-principal img{
+.img-principal img {
   width: 130px;
 }
 
-.botonesSuperiores{
+.botonesSuperiores {
   border: 2px transparent solid;
   padding-bottom: 40px;
   display: flex;
@@ -56,7 +51,7 @@ body{
   gap: 9rem;
 }
 
-.btnS{
+.btnS {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -65,16 +60,17 @@ body{
   width: 300px;
   padding-top: 25px;
   font-family: 'MinecraftTextTwo';
+  transition: 0.5s;
 }
 
-.btnS:hover{
+.btnS:hover {
   text-decoration: underline;
   color: rgb(10, 152, 10);
   transform: scale(1.3);
   transition: 0.5s;
 }
 
-#titulo{
+#titulo {
   border: 4px transparent solid;
   background-color: transparent;
   text-align: left;
@@ -86,7 +82,7 @@ body{
   margin-left: 30px;
 }
 
-#intro{
+#intro {
   color: #349b08;
   text-align: left;
   font-size: 22px;
@@ -95,17 +91,68 @@ body{
   margin-left: 30px;
 }
 
+.grupo-tarjetas {
+  display: flex;
+  justify-content: center; 
+  gap: 6rem;               
+  flex-wrap: wrap;         
+  margin-top: 170px;        
+  padding: 0 20px;         
+}
+
+.tarjeta-contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  box-shadow: 0px 0px 15px #000000;
+}
+
+.tarjeta-img {
+  width: 100%;
+  height: 240px; 
+  object-fit: cover;
+  border-bottom: none;
+}
+
+.tarjeta-descripcion {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-top: none;
+  text-align: center;
+  font-family: 'MinecraftText';
+  min-height: 120px;
+}
+
+.tarjeta-descripcion h3 {
+  color: #349b08;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   DISEÑO MÓVIL (Responsivo)
+   ========================================= */
 /* Cuando la ventana mida 1000px de ancho o menos, aplica estas reglas: */
 @media (max-width: 1000px) {
   
   .botonesSuperiores {
-  /* En vez de estar en fila, los apila de arriba a abajo */
+    flex-direction: column; /* Apila los botones de arriba a abajo */
+    align-items: center;    /* Los centra en la pantalla */
     gap: 1.5rem;            /* Quitamos el espacio gigante de 9rem */
-    padding-top: 130px;     /* Empujamos los botones hacia abajo para que el logo quede libre arriba */
+    padding-top: 130px;     /* Empujamos los botones hacia abajo para librar el logo */
   }
 
   .img-principal img {
-    width: 90px; /* Achicamos un poquito el logo para que no quite tanta pantalla */
+    width: 90px; /* Achicamos un poquito el logo */
   }
 
+  #titulo, #intro {
+    width: 90%; /* Evita que el texto se salga de la pantalla en móviles */
+    margin-left: 15px;
+  }
+
+  .slider-contenedor {
+    flex-direction: column; /* Apila el slider en móviles */
+    margin-left: 0;
+  }
 }

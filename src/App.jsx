@@ -16,9 +16,18 @@ function App() {
     if (!error) setMods(data)
   }
 
+  const imagenes = [
+  "/gsuspartido.jpg",
+  "/hydra.jpg",
+  "/mizona.png"
+];
+
   useEffect(() => {
     obtenerMods()
   }, [filtroLoader, filtroVersion])
+
+
+
   // ------------------------------------
 
   // --- TU HTML (Lienzo en blanco) ---
@@ -39,6 +48,37 @@ function App() {
       <p id="intro">Esto es un proyecto de prueba, 
         en el cual sirve de repositorio para subir y descargar mods de Minecraft 
         de manera ordenada y sencilla</p>
+      
+      <div className="grupo-tarjetas">
+  
+      {/* Imagen 1 */}
+      <div className="tarjeta-contenedor">
+        <img src="/terror1.jpg" alt="Mod 1" className="tarjeta-img" />
+        <div className="tarjeta-descripcion">
+          <h3>Crear Repositorios</h3>
+          <p>Puedes crear repositorios los cuales puedes subir mods filtrandolo por su tipo y version.</p>
+        </div>
+      </div>
+
+      {/* Imagen 2 */}
+      <div className="tarjeta-contenedor">
+        <img src="/terror2.jpg" alt="Mod 2" className="tarjeta-img" />
+        <div className="tarjeta-descripcion">
+          <h3>Descargar Repositorios</h3>
+          <p>Puedes buscar repositorios los cuales por un filtro, puedes descargarlos con total facilidad con un menu totalmente intuitivo.</p>
+        </div>
+      </div>
+
+      {/* Imagen 3 */}
+      <div className="tarjeta-contenedor">
+        <img src="/terror3.png" alt="Mod 3" className="tarjeta-img" />
+        <div className="tarjeta-descripcion">
+          <h3>Buscar Repositorios</h3>
+          <p>Filtro intuitivo para encontrar la cantidad extensa de repositorios disponibles.</p>
+        </div>
+      </div>
+
+    </div>
 
       <section className="zonaFormulario">
         <FormularioSubida />
